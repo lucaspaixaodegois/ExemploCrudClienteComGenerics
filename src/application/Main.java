@@ -22,6 +22,7 @@ public class Main extends Application {
 		primaryStage.setTitle("CRUD de Clientes");
 		primaryStage.setScene(scene);
 		primaryStage.show();
+		//teste
 	}
 
 }
