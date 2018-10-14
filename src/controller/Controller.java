@@ -1,6 +1,8 @@
 package controller;
 
 import factory.JPAFactory;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import model.DefaultEntity;
 import repository.Repository;
 
@@ -15,7 +17,17 @@ public class Controller<T extends DefaultEntity<? super T>> {
 		entity = repository.save(entity);
 		repository.getEntityManager().getTransaction().commit();
 		repository.getEntityManager().close();
-		
+		// alerta do tipo imformação
+				Alert alerta = new Alert(AlertType.INFORMATION);
+				// setando titulo da janela
+				alerta.setTitle("Informação");
+				// titulo da mensagem no caso nao teve
+				alerta.setHeaderText(null);
+				// mensagem para usuario
+				alerta.setContentText("Registro inserido com sucesso!");
+				// mosta a janela/mensagem
+				alerta.show();
+				// chama o metodo para limpar campos
 		return entity;
 	}
 	
@@ -27,5 +39,16 @@ public class Controller<T extends DefaultEntity<? super T>> {
 		repository.remove(entity);
 		repository.getEntityManager().getTransaction().commit();
 		repository.getEntityManager().close();
+		// alerta do tipo imformação
+				Alert alerta = new Alert(AlertType.INFORMATION);
+				// setando titulo da janela
+				alerta.setTitle("Informação");
+				// titulo da mensagem no caso nao teve
+				alerta.setHeaderText(null);
+				// mensagem para usuario
+				alerta.setContentText("Registro removido com sucesso!");
+				// mosta a janela/mensagem
+				alerta.show();
+				// chama o metodo para limpar campos
 	}
 }
