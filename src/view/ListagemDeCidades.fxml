@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <AnchorPane prefHeight="70.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="600.0" text="Listagem de Cidades" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+            <Label fx:id="lbListagemDeCidades" alignment="CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="600.0" text="Listagem de Cidades" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
                <font>
                   <Font size="30.0" />
                </font>
@@ -24,21 +24,21 @@
    <center>
       <AnchorPane prefHeight="320.0" prefWidth="506.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView fx:id="tvListagem" layoutX="37.0" layoutY="135.0" prefHeight="316.0" prefWidth="505.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="100.0">
+            <TableView fx:id="tvListagem" layoutX="37.0" layoutY="76.0" prefHeight="404.0" prefWidth="500.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="80.0">
                <columns>
                   <TableColumn fx:id="tcId" prefWidth="40.0" text="Id" />
                   <TableColumn fx:id="tcNome" prefWidth="211.0" text="Nome" />
-                  <TableColumn fx:id="tcEstado" minWidth="0.0" prefWidth="148.0" text="Estado" />
-                  <TableColumn fx:id="tcEstado1" prefWidth="101.0" text="País" />
+                  <TableColumn fx:id="tcEstado" minWidth="0.0" prefWidth="133.0" text="Estado" />
+                  <TableColumn fx:id="tcPaís" prefWidth="116.0" text="País" />
                </columns>
             </TableView>
-            <Label fx:id="lbNome" layoutX="53.0" layoutY="35.0" text="Nome:" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="30.0">
+            <Label fx:id="lbNome" alignment="CENTER_RIGHT" layoutX="53.0" layoutY="35.0" prefHeight="25.0" prefWidth="80.0" text="Nome:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="30.0">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <TextField fx:id="tfPesquisar" layoutX="98.0" layoutY="30.0" prefHeight="27.0" prefWidth="347.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="30.0" />
-            <Button fx:id="btPesquisar" layoutX="453.0" layoutY="31.0" mnemonicParsing="false" onAction="#handlePesquisar" prefWidth="80.0" text="Pesquisar" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+            <TextField fx:id="tfPesquisar" layoutX="84.0" layoutY="30.0" prefHeight="27.0" prefWidth="347.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="115.0" AnchorPane.topAnchor="30.0" />
+            <Button fx:id="btPesquisar" layoutX="453.0" layoutY="31.0" mnemonicParsing="false" onAction="#handlePesquisar" prefHeight="25.0" prefWidth="80.0" text="Pesquisar" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
          </children>
       </AnchorPane>
    </center>
@@ -49,6 +49,6 @@
       <AnchorPane prefHeight="320.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
    </right>
    <bottom>
-      <AnchorPane prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="20.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
    </bottom>
 </BorderPane>
