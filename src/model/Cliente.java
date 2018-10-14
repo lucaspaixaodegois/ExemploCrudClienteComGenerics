@@ -18,7 +18,7 @@ public class Cliente extends DefaultEntity<Cliente> {
 	private String endereco;
 	private String email;
 	
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="cliente")
 	private List<Telefone> listaTelefone;
 	
 	@Column(columnDefinition="Date")
@@ -76,4 +76,13 @@ public class Cliente extends DefaultEntity<Cliente> {
 	public void setDataAniversaio(LocalDate dataAniversaio) {
 		this.dataAniversaio = dataAniversaio;
 	}
+
+	public List<Telefone> getListaTelefone() {
+		return listaTelefone;
+	}
+
+	public void setListaTelefone(List<Telefone> listaTelefone) {
+		this.listaTelefone = listaTelefone;
+	}
+	
 }

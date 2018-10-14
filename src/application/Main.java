@@ -17,13 +17,11 @@ public class Main extends Application {
 		
 		AnchorPane root = FXMLLoader.load(getClass().getResource("/view/CadastroCliente.fxml"));
 		
-		Scene scene = new Scene(root, 600, 400);
+		Scene scene = new Scene(root, 600, 600);
 		
 		primaryStage.setTitle("CRUD de Clientes");
 		primaryStage.setScene(scene);
 		primaryStage.show();
-		//teste
 	}
 
 }
-

@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClienteController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClienteController">
    <children>
       <TabPane fx:id="tpAbas" layoutX="200.0" layoutY="88.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
         <tabs>
@@ -20,7 +20,7 @@
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="68.0" prefWidth="100.0" text="Nome:" AnchorPane.leftAnchor="20.0" />
-                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="28.0" prefWidth="100.0" text="Cpf:" AnchorPane.leftAnchor="20.0" />
+                        <Label alignment="CENTER_RIGHT" layoutX="40.0" layoutY="28.0" prefWidth="100.0" text="CPF:" AnchorPane.leftAnchor="20.0" />
                         <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="108.0" prefWidth="100.0" text="Endereço:" AnchorPane.leftAnchor="20.0" />
                         <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="148.0" prefWidth="100.0" text="Email:" AnchorPane.leftAnchor="20.0" />
                         <TextField fx:id="tfCpf" layoutX="146.0" layoutY="23.0" AnchorPane.leftAnchor="126.0" AnchorPane.rightAnchor="20.0" />
@@ -31,17 +31,17 @@
                         <Button fx:id="btExcluir" layoutX="387.0" layoutY="236.0" mnemonicParsing="false" onAction="#handleExcluir" prefWidth="80.0" text="Excluir" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="120.0" />
                         <Button fx:id="btAlterar" layoutX="273.0" layoutY="236.0" mnemonicParsing="false" onAction="#handleAlterar" prefWidth="80.0" text="Alterar" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="220.0" />
                         <Button fx:id="btIncluir" layoutX="174.0" layoutY="236.0" mnemonicParsing="false" onAction="#hadleIncluir" prefWidth="80.0" text="Incluir" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="320.0" />
-                        <Label layoutX="47.0" layoutY="186.0" text="Aniversário:" />
-                        <DatePicker fx:id="dpAniversario" layoutX="127.0" layoutY="181.0" />
-                        <Label layoutX="84.0" layoutY="229.0" text="DDD:" />
-                        <TextField fx:id="tfCodigoArea" layoutX="127.0" layoutY="224.0" prefHeight="27.0" prefWidth="66.0" />
-                        <TextField fx:id="tfNumero" layoutX="280.0" layoutY="224.0" />
-                        <Label layoutX="217.0" layoutY="229.0" text="Número" />
-                        <Button layoutX="460.0" layoutY="224.0" mnemonicParsing="false" onAction="#handleAdicionarTelefone" prefHeight="27.0" prefWidth="104.0" text="Adicionar" />
-                        <TableView fx:id="tbTelefone" layoutX="128.0" layoutY="265.0" prefHeight="151.0" prefWidth="437.0">
+                        <Label layoutX="53.0" layoutY="186.0" prefHeight="17.0" prefWidth="67.0" text="Aniversário:" AnchorPane.leftAnchor="50.0" />
+                        <DatePicker fx:id="dpAniversario" layoutX="124.0" layoutY="181.0" AnchorPane.leftAnchor="125.0" />
+                        <Label layoutX="306.0" layoutY="185.0" text="DDD:" AnchorPane.leftAnchor="306.0" />
+                        <TextField fx:id="tfCodigoArea" layoutX="339.0" layoutY="180.0" prefHeight="27.0" prefWidth="66.0" AnchorPane.leftAnchor="339.0" />
+                        <TextField fx:id="tfNumero" layoutX="465.0" layoutY="181.0" AnchorPane.leftAnchor="466.0" AnchorPane.rightAnchor="95.0" />
+                        <Label layoutX="410.0" layoutY="185.0" prefHeight="17.0" prefWidth="50.0" text="Número:" AnchorPane.leftAnchor="410.0" AnchorPane.topAnchor="185.0" />
+                        <Button layoutX="620.0" layoutY="180.0" mnemonicParsing="false" onAction="#handleAdicionarTelefone" prefHeight="27.0" prefWidth="67.0" text="Adicionar" AnchorPane.rightAnchor="20.0" />
+                        <TableView fx:id="tbTelefone" layoutX="70.0" layoutY="220.0" prefHeight="229.0" prefWidth="640.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="220.0">
                           <columns>
-                            <TableColumn fx:id="tcCodigoArea" prefWidth="75.0" text="DDD" />
-                            <TableColumn fx:id="tcNumero" prefWidth="361.0" text="Número" />
+                            <TableColumn fx:id="tcCodigoArea" prefWidth="140.0" text="DDD" />
+                            <TableColumn fx:id="tcNumero" prefWidth="500.0" text="Número" />
                           </columns>
                         </TableView>
                      </children>
@@ -62,6 +62,7 @@
                               <TableColumn fx:id="tcNomeClientes" editable="false" prefWidth="161.0" text="Nome" />
                               <TableColumn fx:id="tcEnderecoClientes" editable="false" prefWidth="130.0" text="Endereço" />
                               <TableColumn fx:id="tcEmailClientes" editable="false" prefWidth="138.0" text="Email" />
+                              <TableColumn fx:id="tcAniversarioClientes" editable="false" prefWidth="138.0" text="Aniversário" />
                           </columns>
                         </TableView>
                      </children>
@@ -70,7 +71,7 @@
           </Tab>
         </tabs>
       </TabPane>
-      <Label alignment="CENTER" layoutY="14.0" prefHeight="80.0" prefWidth="600.0" text="Cadastro de Cliente" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Label alignment="CENTER" layoutY="14.0" prefHeight="80.0" prefWidth="600.0" text="Cadastro de Cidade" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <font>
             <Font size="30.0" />
          </font>
